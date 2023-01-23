@@ -14,7 +14,6 @@ app.use(indexRoute);
 
 app.use(express.static(join(__dirname, 'public')));
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server listening at PORT: ${PORT}...`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Server listening at PORT:', process.env.PORT || 3000);
 });
